@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FraDemo</string>
+    <string name="home_sport">运动</string>
+    <string name="home_rank">排行</string>
+    <string name="home_user">用户</string>
+    <string name="sport_start">开始</string>
+    <string name="sport_stop">停止</string>
+</resources>
