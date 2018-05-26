@@ -77,7 +77,7 @@ public class RunFragment extends Fragment {
         eventBus.register(this);
 
         mainActivity = (FragmentActivity)getActivity();
-        Bmob.initialize(mainActivity,"");
+        Bmob.initialize(mainActivity,"c50c8a2125db58a711b783daba816417");
         final MyUser bu = BmobUser.getCurrentUser(MyUser.class);
 
         sharedPreferences = mainActivity.getSharedPreferences("FraDemo",mainActivity.MODE_PRIVATE);

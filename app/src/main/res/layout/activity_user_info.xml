@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UserInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/colorblue"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/colorblue"
+            android:text="返回"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="55dp"
+            android:paddingStart="55dp"
+            android:text="我的信息"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.249">
+
+        <TextView
+            android:id="@+id/tv_userinfo_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="70dp"
+            android:paddingLeft="70dp"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="1px"
+            android:text="年龄："
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_userinfo_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="70dp"
+            android:paddingLeft="70dp"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="1px"
+            android:text="身高："
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_userinfo_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="70dp"
+            android:paddingLeft="70dp"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="1px"
+            android:text="体重："
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_userinfo_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改信息"
+        android:textSize="20sp"
+        android:background="@color/colorblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

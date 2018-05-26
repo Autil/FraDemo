@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Bmob.initialize(this,"");
+        Bmob.initialize(this,"c50c8a2125db58a711b783daba816417");
         eventBus = EventBus.getDefault();
         eventBus.register(this);
 

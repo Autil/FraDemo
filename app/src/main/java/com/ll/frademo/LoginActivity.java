@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Bmob.initialize(this,"");
+        Bmob.initialize(this,"c50c8a2125db58a711b783daba816417");
         bt1 = findViewById(R.id.bt_login);
         bt2 = findViewById(R.id.bt_login_register);
         et_name = findViewById(R.id.et_username);

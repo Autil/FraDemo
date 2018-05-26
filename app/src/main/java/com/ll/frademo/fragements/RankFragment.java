@@ -49,7 +49,7 @@ public class RankFragment extends Fragment implements View.OnClickListener{
             savedInstanceState) {
         View view = inflater.inflate(R.layout.rank_fragment,null);
         rankactivity = (FragmentActivity) getActivity();
-        Bmob.initialize(rankactivity,"");
+        Bmob.initialize(rankactivity,"c50c8a2125db58a711b783daba816417");
 
         tv_name = view.findViewById(R.id.tv_rank_name);
         tv_distance = view.findViewById(R.id.tv_rank_distance);

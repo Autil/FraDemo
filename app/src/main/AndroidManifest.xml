@@ -31,9 +31,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="" />
+            android:value="6b8f160c388074cedbfdd530430b7500" />
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".map.map" />
 
         <service android:name=".service.BackService" />
@@ -48,6 +48,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.EditInfo" />
+        <activity android:name=".activity.DataActivity" />
+        <activity android:name=".activity.ShowDataActivity"></activity>
     </application>
 
 </manifest>

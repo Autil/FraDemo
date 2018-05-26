@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Bmob.initialize(this,"");
+        Bmob.initialize(this,"c50c8a2125db58a711b783daba816417");
         final MyUser userIfno = BmobUser.getCurrentUser(MyUser.class);
         Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {
