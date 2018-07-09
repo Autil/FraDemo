@@ -39,4 +39,5 @@ dependencies {
     //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
     implementation 'cn.bmob.android:http-legacy:1.0'
     implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+    implementation project(':PullToRefresh')
 }

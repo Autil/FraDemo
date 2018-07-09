@@ -28,13 +28,10 @@
             android:layout_weight="1"
             android:gravity="center"/>
     </LinearLayout>
-    <ListView
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_rank_pulllistview"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:id="@+id/list_view"></ListView>
-    <Button
-        android:id="@+id/bt_rank"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="刷新排行榜"/>
+        android:layout_height="400dp">
+
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
 </LinearLayout>

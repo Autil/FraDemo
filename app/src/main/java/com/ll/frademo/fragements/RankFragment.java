@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.ll.frademo.R;
 import com.ll.frademo.bean.MyUser;
 
@@ -31,10 +34,10 @@ import cn.bmob.v3.listener.FindListener;
  * Created by l4396 on 2018/3/21.
  */
 
-public class RankFragment extends Fragment implements View.OnClickListener{
+public class RankFragment extends Fragment{
+    private PullToRefreshListView pullToRefreshListView;
     private TextView tv_name,tv_distance;
     private ListView listView;
-    private Button bt_rank;
     private ImageView iv_rank;
     private SimpleAdapter rankAdpter;
     private List<Map<String,Object>> rankdata;
@@ -53,10 +56,14 @@ public class RankFragment extends Fragment implements View.OnClickListener{
 
         tv_name = view.findViewById(R.id.tv_rank_name);
         tv_distance = view.findViewById(R.id.tv_rank_distance);
-        bt_rank = view.findViewById(R.id.bt_rank);
-        listView = view.findViewById(R.id.list_view);
         iv_rank = view.findViewById(R.id.iv_rank);
-        bt_rank.setOnClickListener(this);
+        pullToRefreshListView = view.findViewById(R.id.lv_rank_pulllistview);
+        pullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+            @Override
+            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+                Query();
+            }
+        });
         return view;
     }
     private void show(String msg){
@@ -84,22 +91,21 @@ public class RankFragment extends Fragment implements View.OnClickListener{
                         map.put("distance",date.getMdistance());
                         rankdata.add(map);
                     }
+                    listView = pullToRefreshListView.getRefreshableView();
                     String[] from = {"image","name","distance"};
                     int[] to = {R.id.iv_rank,R.id.tv_rank_name,R.id.tv_rank_distance};
-                    rankAdpter = new SimpleAdapter(rankactivity,rankdata,R.layout.ranklist_item,from,to);
+                    rankAdpter = new SimpleAdapter(rankactivity,rankdata,R.layout.ranklist_item,
+                            from,to);
                     listView.setAdapter(rankAdpter);
+                    listView.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pullToRefreshListView.onRefreshComplete();
+                        }
+                    },1000);
 
                 }
             }
         });
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.bt_rank:
-                Query();
-                break;
-        }
     }
 }

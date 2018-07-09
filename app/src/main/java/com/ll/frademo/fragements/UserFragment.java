@@ -2,7 +2,6 @@ package com.ll.frademo.fragements;
 
 import android.app.Fragment;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
@@ -13,7 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ll.frademo.LoginActivity;
-import com.ll.frademo.MainActivity;
 import com.ll.frademo.R;
 import com.ll.frademo.activity.DataActivity;
 import com.ll.frademo.activity.UserInfoActivity;
@@ -65,6 +63,8 @@ public class UserFragment extends Fragment implements View.OnClickListener{
             case R.id.tv_sport_data:
                 Intent intent2 = new Intent(mainactivity, DataActivity.class);
                 startActivity(intent2);
+                break;
+            default:
                 break;
         }
 

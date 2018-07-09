@@ -51,7 +51,7 @@
         <activity android:name=".activity.UserInfoActivity" />
         <activity android:name=".activity.EditInfo" />
         <activity android:name=".activity.DataActivity" />
-        <activity android:name=".activity.ShowDataActivity"></activity>
+        <activity android:name=".activity.ShowDataActivity" />
     </application>
 
 </manifest>
